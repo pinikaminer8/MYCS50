@@ -1,6 +1,6 @@
-# CS50 Project Repository
+# CS50 Repository
 
-Welcome to my CS50 project repository! This repository contains the code and files related to my work in the CS50 course. Below, you'll find an overview of the contents and how to navigate through the repository.
+Welcome to my CS50 repository! This repository contains the code and files related to my work in the CS50 course.
 
 ## Table of Contents
 
