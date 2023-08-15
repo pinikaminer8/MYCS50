@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: When checking an ordered list, it is the fastest. In the messy tests he was the slowest. This is clearly a bubble sort
+
+sort2 uses: Merge sort
+
+How do you know?: When testing messy lists it was the fastest. Also in the test there is a reverse and random list. It clearly is a merge sort
+
+sort3 uses: Selection sort
+
+How do you know?: In the ordered list he was the slowest. It clearly is a selection sort

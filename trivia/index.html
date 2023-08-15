@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function check()
+            {
+                let trueButton = document.querySelector('#trueButton');
+                let falseButton = document.querySelector('#falseButton');
+                let falseButton2 = document.querySelector('#falseButton2');
+                let checkCorrect = document.querySelector('#checkCorrect');
+
+                falseButton.addEventListener('click', function() {
+                    checkCorrect.textContent = "Incorrect";
+                    falseButton.style.backgroundColor = 'red';
+                });
+
+                falseButton2.addEventListener('click', function() {
+                    checkCorrect.textContent = "Incorrect";
+                    falseButton2.style.backgroundColor = 'red';
+                });
+
+                trueButton.addEventListener('click', function() {
+                    checkCorrect.textContent = "Correct";
+                    trueButton.style.backgroundColor = 'green';
+                });
+
+
+
+            }
+
+            function check2()
+            {
+                let input = document.querySelector('#input');
+                let checkButton = document.querySelector('#checkButton');
+                let checkCorrect2 = document.querySelector('#checkCorrect2');
+                checkButton.addEventListener('click', function() {
+                    if (input.value == 10){
+                        checkCorrect2.textContent = "Correct";
+                        input.style.backgroundColor = 'green';
+                    }else{
+
+                        checkCorrect2.textContent = 'Incorrect';
+                        input.style.backgroundColor = 'red';
+                }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>"Who is the senior lecturer who gives the cs50 introductory course?"</h3>
+                <button id="trueButton">David Mallan</button>
+                <button id="falseButton">Pini Kaminer</button>
+                <button id="falseButton2">David Shwimer</button>
+                <h4 id="checkCorrect"></h4>
+                <script>
+                    check();
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>"How many weeks are there in the cs50 2023 course?"</h3>
+                <input autofocus id=input placeholder="Your answer">
+                <button id="checkButton">Submit</button>
+                <h4 id="checkCorrect2"></h4>
+                <script>
+                    check2();
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
