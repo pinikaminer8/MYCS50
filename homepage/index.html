@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>My Website</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script>
+            function change()
+            {
+                let welcomeText = document.querySelector('#index-header');
+                let welcomeImage = document.querySelector('#index-image2');
+                let originalColor = welcomeText.style.color;
+
+                welcomeImage.addEventListener('click', function() {
+                    if (welcomeText.style.color === originalColor) {
+                    welcomeText.style.color = 'red';
+                    } else {
+                    welcomeText.style.color = originalColor;
+                    }
+  });
+}
+
+        </script>
+    </head>
+    <body>
+        <div class="alert alert-primary" role="alert">
+            We use cookies
+        </div>
+        <img id="index-image1" alt="Contact" src="https://lh3.googleusercontent.com/wX2FyIiCFi_lqErYG8z5EIsYJcPKW2TeHfdNedFUknYsqZEx-_tDe5sYMuZxoWOfQ_DPw1Wiw1nq7J5npJj1Cy8=w16383">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 id="index-header">Welcome to My Website</h1>
+        <img id="index-image2" alt="Contact" src="https://i.postimg.cc/zGcLFQxG/colorful-welcome-design-template-free-vector.jpg">
+        <script>
+            change();
+        </script>
+    </body>
+</html>
