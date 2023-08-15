@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shares
+{% endblock %}
+
+{% block main %}
+<div class="header">
+    <h1>Your Shares</h1>
+</div>
+
+<div class="section">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for holding in holdings %}
+            <tr>
+                <td>{{ holding["symbol"] }}</td>
+                <td>{{ holding["shares"] }}</td>
+                <td>{{ holding["price"] }}</td>
+                <td>{{ holding["total_value"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="section">
+    <h2>Current Cash Balance</h2>
+    <p>Total: {{ cash_balance }}</p>
+</div>
+<div class="section">
+    <h2>Grand Total</h2>
+    <p>Total: {{ total }}</p>
+</div>
+
+{% endblock %}
